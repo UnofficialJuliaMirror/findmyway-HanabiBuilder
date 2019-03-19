@@ -8,7 +8,7 @@ version = v"0.1.0"
 # Collection of sources required to build HanabiBuilder
 sources = [
     "https://github.com/findmyway/hanabi-learning-environment.git" =>
-    "3531eaac21bab0c6ffcdd0584b2702d77a9e2e91",
+    "9137fa25c3b0b1eb9a36bf66b2d1730f79e2235d",
 
 ]
 
