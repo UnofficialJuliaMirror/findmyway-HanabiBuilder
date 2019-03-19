@@ -2,7 +2,7 @@
 # `julia build_tarballs.jl --help` to see a usage message.
 using BinaryBuilder
 
-name = "HanabiBuilder"
+name = "Hanabi"
 version = v"0.1.0"
 
 # Collection of sources required to build HanabiBuilder
@@ -19,15 +19,12 @@ cd hanabi-learning-environment/
 cmake -DCMAKE_INSTALL_PREFIX=$prefix -DCMAKE_TOOLCHAIN_FILE=/opt/$target/$target.toolchain .
 make
 make install
-exit
-
 """
 
 # These are the platforms we will build for by default, unless further
 # platforms are passed in on the command line
-platforms = [
-    Linux(:x86_64, libc=:glibc)
-]
+platforms = supported_platforms()
+platforms = expand_gcc_versions(platforms)
 
 # The products that we will ensure are always built
 products(prefix) = [
