@@ -8,7 +8,7 @@ version = v"0.1.0"
 # Collection of sources required to build HanabiBuilder
 sources = [
     "https://github.com/findmyway/hanabi-learning-environment.git" =>
-    "9137fa25c3b0b1eb9a36bf66b2d1730f79e2235d",
+    "eba7a6bb613bd50ee5b0f3004412eb83e129a5c5",
 
 ]
 
@@ -24,7 +24,17 @@ make install
 # These are the platforms we will build for by default, unless further
 # platforms are passed in on the command line
 platforms = [
-    Linux(:x86_64, libc=:glibc)
+    Linux(:x86_64, libc=:glibc),
+    Linux(:i686, libc=:glibc),
+    Linux(:aarch64, libc=:glibc),
+    Linux(:armv7l, libc=:glibc, call_abi=:eabihf),
+    Linux(:powerpc64le, libc=:glibc),
+    Linux(:i686, libc=:musl),
+    Linux(:x86_64, libc=:musl),
+    Linux(:aarch64, libc=:musl),
+    Linux(:armv7l, libc=:musl, call_abi=:eabihf), 
+    Windows(:i686),
+    Windows(:x86_64)
 ]
 
 # The products that we will ensure are always built
