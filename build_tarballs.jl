@@ -3,12 +3,12 @@
 using BinaryBuilder
 
 name = "Hanabi"
-version = v"0.1.0"
+version = v"0.1.1"
 
 # Collection of sources required to build HanabiBuilder
 sources = [
     "https://github.com/findmyway/hanabi-learning-environment.git" =>
-    "eba7a6bb613bd50ee5b0f3004412eb83e129a5c5",
+    "4751515fe07404af5119927acdabb790e35147c2",
 
 ]
 
